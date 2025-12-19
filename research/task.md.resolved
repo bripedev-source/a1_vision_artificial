@@ -1,0 +1,76 @@
+# Task: Diseño e Implementación de API MCP Óptima
+
+- [x] **Fase 1: Diseño del API (Planning)**
+    - [x] Analizar funciones actuales en [processing.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py) y [ui.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/ui.py). <!-- id: 0 -->
+    - [x] Definir catálogo de herramientas fundamentales (Atomicas vs Compuestas). <!-- id: 1 -->
+    - [x] Crear artefacto de diseño [diseno_api_mcp_optima.md](file:///C:/Users/pesci/.gemini/antigravity/brain/b91190e1-f47e-4277-83db-642257d276fb/diseno_api_mcp_optima.md). <!-- id: 2 -->
+- [x] **Fase 2: Implementación (Execution)**
+    - [x] Crear interfaz dedicada `src/api.py` (o refactorizar). <!-- id: 3 -->
+    - [x] Exponer endpoints limpios para el agente. <!-- id: 4 -->
+- [x] **Fase 3: Validación**
+    - [x] Verificar que el agente puede "ver" y usar las nuevas herramientas. <!-- id: 5 -->
+- [x] Phase 6: Syllabus Simulation Tools (Topics 3 & 4)
+    - [x] Implement [add_noise](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/transform.py#99-101) (Gaussian, Salt & Pepper) in [processing.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py).
+    - [x] Implement [simulate_degradation](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/transform.py#102-104) (Downsampling, Quantization) in [processing.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py).
+    - [x] Expose tools in [agent_api.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api.py) and [mcp_interface.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/mcp_interface.py).
+    - [x] Update [get_capabilities](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/meta.py#5-84) schema.
+
+- [x] Phase 7: Syllabus Arithmetic Operations (Topic 6)
+    - [x] Implement [apply_arithmetic_ops](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py#241-285) (Add, Subtract, Mult, Div) in [processing.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py).
+    - [x] Expose [arithmetic](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/transform.py#105-107) in [agent_api.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api.py) and [get_capabilities](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/meta.py#5-84).
+    - [x] Add "Arithmetic Lab" to [mcp_interface.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/mcp_interface.py).
+- [x] **Fase 5: Cobertura Total Temario (Syllabus)**
+    - [x] Exponer [negative](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py#118-125), [contrast_stretching](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py#177-210), [gaussian](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py#505-515). <!-- id: 9 -->
+    - [x] Implementar [compute_difference](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/diagnostics.py#30-49) (Resta de imágenes - Tema 6). <!-- id: 10 -->
+    - [x] Implementar `average_images` (Reducción de ruido - Tema 4). <!-- id: 11 -->
+    - [x] Reflejar cambios en [mcp_interface.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/mcp_interface.py). <!-- id: 12 -->
+- [x] **Fase 6: Arquitectura y Seguridad (Output)**
+    - [x] Implementar sistema de guardado `safe_semantic_save`. <!-- id: 13 -->
+    - [x] Estructurar salidas en `output/{Categoria}/{Operacion}/`. <!-- id: 14 -->
+
+- [x] **Fase 7: Experiencia de Usuario Colaborativa (UI/UX)**
+    - [x] Implementar Interfaz Híbrida (Tabs, Sliders, Visual Input).
+    - [x] Asegurar compatibilidad dual (Humano vs Agente).
+    - [x] Actualizar documentación ([README.md](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/README.md), [manual_agente_mcp.md](file:///C:/Users/pesci/.gemini/antigravity/brain/b91190e1-f47e-4277-83db-642257d276fb/manual_agente_mcp.md)).
+    - [x] Verificar integración con Notebook.
+
+- [x] **Fase 8: Refactorización y Mantenibilidad**
+    - [x] Crear estructura de paquete `src.interface`.
+    - [x] Mover lógica de UI (Wrappers) a `src.interface.utils`.
+    - [x] Modularizar Pestañas en `src.interface.tabs`.
+    - [x] Simplificar [mcp_interface.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/mcp_interface.py) como punto de entrada ligero.
+
+- [x] **Fase 9: Limpieza y Optimización**
+    - [x] Verificar [requirements.txt](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/requirements.txt) (eliminar deps no usadas).
+    - [x] Limpiar imports no usados en [agent_api.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api.py) y [processing.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/processing.py).
+    - [x] Unificar Docstrings para auto-documentación de MCP.
+    - [x] Verificar funcionamiento del Servidor MCP tras la refactorización.
+
+- [x] **Fase 10: Modularización de Backend (API)**
+    - [x] Crear paquete `src/agent_api/`.
+    - [x] Extraer Configuración e I/O ([config.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/config.py), [io.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/io.py)).
+    - [x] Extraer Lógica Meta y Diagnóstico ([meta.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/meta.py), [diagnostics.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/diagnostics.py)).
+    - [x] Extraer Transformaciones y Workflows ([transform.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/transform.py), [workflows.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/workflows.py)).
+    - [x] Unificar API en [src/agent_api/__init__.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/__init__.py).
+
+- [x] **Fase 11: Compatibilidad y Despliegue**
+    - [x] Detección de entorno (Google Colab vs Docker vs Local).
+    - [x] Soporte para `share=True` dinámico en [mcp_interface.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/mcp_interface.py).
+    - [x] Agregar Pestaña "Conectividad/Ayuda" en UI.
+    - [x] Verificar rutas en entornos híbridos.
+
+- [x] **Fase 12: Documentación Final y Entrega**
+    - [x] Actualizar [README.md](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/README.md) con estructura final.
+    - [x] Generar reporte de validación (via backend).
+    - [x] Empaquetar entregables.
+
+- [x] **Fase 13: Ejecución de Experimento Científico**
+    - [x] Ejecutar análisis diagnóstico en 4 imágenes Dark Face.
+    - [x] Aplicar técnicas de mejora (Gamma, CLAHE, Equalize, Median).
+    - [x] Demostrar la función de la mediana sobre una imágen con ruido de sal y pimienta.
+    - [x] Analizar y Comparar resultados (métricas SNR, Entropía).
+
+- [x] **Fase 14: Mejoras UI (Diagnosis & Pipelines)**
+    - [x] Agregar [run_median_demo](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/agent_api/workflows.py#185-242) al backend.
+    - [x] Mejorar [diagnosis.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/interface/tabs/diagnosis.py) con demo y visuales.
+    - [x] Mejorar [pipelines.py](file:///c:/Users/pesci/Documents/UNIR/VA/Actividad%201/entrega_buena/dark_face_app/src/interface/tabs/pipelines.py) con output visual.

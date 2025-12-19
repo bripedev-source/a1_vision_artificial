@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: dark-face-app
+    ports:
+      - "7861:7861"
+    volumes:
+      - .:/app
+    environment:
+      - GRADIO_SERVER_NAME=0.0.0.0
+    restart: always

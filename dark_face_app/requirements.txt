@@ -1,0 +1,5 @@
+gradio[mcp]>=5.9.0
+opencv-python>=4.11.0.86
+numpy>=2.3.5
+matplotlib>=3.10.8
+watchfiles>=0.21.0
